@@ -1,0 +1,59 @@
+{
+  "name": "fileUpload",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds-odata-v2-adapter-proxy": "^1.6.2",
+    "@sap/cds": "^5",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.84.37",
+    "sqlite3": "^5.0.2"
+  },
+  "scripts": {
+    "start": "cds watch",
+    "watch-demo": "cds watch --open demo/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2020": true,
+      "node": true,
+      "jest": true,
+      "mocha": true
+    },
+    "globals": {
+      "SELECT": true,
+      "INSERT": true,
+      "UPDATE": true,
+      "DELETE": true,
+      "CREATE": true,
+      "DROP": true,
+      "CDL": true,
+      "CQL": true,
+      "CXL": true,
+      "cds": true
+    },
+    "rules": {
+      "no-console": "off",
+      "require-atomic-updates": "off"
+    }
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "media.db"
+        }
+      }
+    }
+  },
+  "sapux": [
+    "app/demo"
+  ]
+}

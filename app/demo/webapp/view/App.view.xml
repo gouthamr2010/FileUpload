@@ -1,0 +1,12 @@
+<mvc:View controllerName="com.gr.demo.controller.App" xmlns:l="sap.ui.layout" xmlns:upload="sap.m.upload" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:u="sap.ui.unified" xmlns="sap.m">
+    <App id="app">
+        <pages>
+            <Page id="page" title="{i18n>title}">
+                <content>
+                    <upload:UploadSet id="fileUpload" class="sapUiMediumMargin" instantUpload="false" showIcons="true" uploadEnabled="true" terminationEnabled="true" maxFileNameLength="30" maxFileSize="200" 
+                        afterItemAdded="onAfterItemAdded" uploadCompleted="onUploadCompleted" />
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>
